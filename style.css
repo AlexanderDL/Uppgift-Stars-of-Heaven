@@ -1,50 +1,125 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: darkblue;
+    color: black;
+    line-height: 1.6;
+}
+
+
+h1, h2, h3 {
+    color: #ff3333;
+    margin-bottom: 0.7rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+header.title {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    border-bottom: 3px solid #cc0000;
+}
+
+header.title h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
 }
 
-header.title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px;
+nav ul li a {
+    color: #ff5555;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-section {
-    padding: 48px 32px;
+nav ul li a:hover {
+    color: whitesmoke;
 }
-section p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+
+.members-grid,
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.member-card,
+.album-card {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    max-width: 500px;
+    max-height: 600px;
+}
+
+.member-card h3,
+.album-card h3 {
+    padding: 12px 15px 5px;
+}
+
+.member-card p,
+.album-card p {
+    padding: 0 15px;
+}
+
+.member-card img,
+.album-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.top5-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.top5-table th,
+.top5-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.top5-table th {
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+}
+
+.top5-table tr:nth-child(even) {
+    background-color: white;
 }
 
 footer {
-    padding: 24px 32px;
     text-align: center;
-    background: black;
-    color: white;
-}
-
-h1, h2 {
-    font-family: Georgia, serif;
-    margin: 0 0 16px 0;
-}
-
-.hero {
-    background: darkred;
-    color: white;
-    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 2px solid red;
+    color: gray;
 }
